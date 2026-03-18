@@ -330,7 +330,21 @@ body::before {
     word-break: break-all;
     line-height: 2;
     color: #2d5e4a;
+    text-align: center;
+    font-size: 2rem;
 }
+
+/* Ajuste para imágenes en la sección de anexos */
+.simbolos img {
+    max-width: 25%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 40, 20, 0.15);
+    border: 2px solid #e2f0e8;
+}
+
 
 /* Footer */
 footer {
@@ -349,5 +363,35 @@ footer {
     }
     .section {
         padding: 1.5rem;
+    }
+}
+
+/* Grid específico para la introducción */
+.intro-grid {
+    display: grid;
+    gap: 1.8rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.intro-resumen {
+    grid-column: span 2;
+}
+
+@media (max-width: 700px) {
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+    .intro-resumen {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .simbolos {
+        font-size: 1.5rem;
+    }
+    .simbolos img {
+        max-width: 95%;
+        border-radius: 12px;
     }
 }
